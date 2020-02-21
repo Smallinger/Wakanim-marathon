@@ -2,7 +2,7 @@
 // @name         Wakanim skip intro and outro
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Automatically skip intro and outro on Wakanim
+// @description  Automatically play next episode and skip intro and outro on Wakanim
 // @author       Smallinger
 // @match        https://www.wakanim.tv/*
 // @updateURL    https://raw.githubusercontent.com/Smallinger/Wakanim-marathon/master/Wakanim-marathon.user.js
