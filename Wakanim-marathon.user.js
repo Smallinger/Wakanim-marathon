@@ -10,8 +10,10 @@
 // @grant        none
 // ==/UserScript==
 
+
 (function() {
     'use strict';
+    var wasFallScreen = false;
     setInterval(function(){
         //Check if on watching
         var urlParts = window.location.href.split("/");
@@ -30,5 +32,20 @@
                 nextEpisode.children[1].children[1].click();
             }
         }
+        //check fullscreen
+        if(urlParts.indexOf("episode") > -1){
+            var fullScreen = document.querySelector(".jw-icon-fullscreen");
+            if(typeof(fullScreen) != "undefined"){
+                if(fullScreen.getAttribute("aria-label") == "Vollbild"){
+                    if(wasFallScreen == true){
+
+                    } else {
+                        wasFallScreen = true
+                        jwplayer().setFullscreen(true);
+                    }
+                }
+            }
+        }
     }, 1000);
+
 })();
